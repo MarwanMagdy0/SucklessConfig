@@ -1,0 +1,67 @@
+# ─────────────────────────────────────
+# Suckless build artifacts
+# ─────────────────────────────────────
+
+# Compiled binaries
+dwm/dwm
+st/st
+dmenu/dmenu
+dmenu/dmenu_path
+dmenu/dmenu_run
+dmenu/stest
+
+# Object files
+*.o
+
+# Dependency files
+*.d
+
+# Generated configuration
+
+# Generated version information
+util.h
+
+# ─────────────────────────────────────
+# Build / temporary files
+# ─────────────────────────────────────
+
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+# Vim / Neovim swap files
+[._]*.s[a-v][a-z]
+*.un~
+Session.vim
+
+# ─────────────────────────────────────
+# OS junk
+# ─────────────────────────────────────
+
+.DS_Store
+Thumbs.db
+
+# ─────────────────────────────────────
+# IDE / editor files
+# ─────────────────────────────────────
+
+.vscode/
+.idea/
+
+# ─────────────────────────────────────
+# General build directories
+# ─────────────────────────────────────
+
+build/
+dist/
+out/
+
+# ─────────────────────────────────────
+# Core dumps
+# ─────────────────────────────────────
+
+core
+core.*
