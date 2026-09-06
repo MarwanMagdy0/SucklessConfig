@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:size=26:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:style=Bold:size=26";
 static int borderpx = 2;
-
+unsigned int scrollback_lines = 5000;
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
