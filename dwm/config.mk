@@ -4,7 +4,7 @@ VERSION = 6.8
 # Customize below to fit your system
 
 # paths
-PREFIX = /data/data/com.termux/files/usr
+PREFIX ?= /data/data/com.termux/files/usr
 MANPREFIX = ${PREFIX}/share/man
 
 X11INC = /usr/X11R6/include
@@ -16,7 +16,7 @@ XINERAMAFLAGS = -DXINERAMA
 
 # freetype
 FREETYPELIBS = -lfontconfig -lXft
-FREETYPEINC = ${PREFIX}/include/freetype2
+FREETYPEINC ?= ${PREFIX}/include/freetype2
 # OpenBSD (uncomment)
 #FREETYPEINC = ${X11INC}/freetype2
 #MANPREFIX = ${PREFIX}/man
