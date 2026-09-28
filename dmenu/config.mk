@@ -2,7 +2,7 @@
 VERSION = 5.4
 
 # paths
-PREFIX = /data/data/com.termux/files/usr
+PREFIX ?= /data/data/com.termux/files/usr
 MANPREFIX = $(PREFIX)/share/man
 
 X11INC = /usr/X11R6/include
