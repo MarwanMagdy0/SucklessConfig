@@ -16,10 +16,22 @@ unsigned int scrollback_lines = 5000;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/data/data/com.termux/files/usr/bin/zsh";
+
+#ifdef __ANDROID__
+
+#define SHELL_PATH "/data/data/com.termux/files/usr/bin/zsh"
+#define SCROLL_PATH "/data/data/com.termux/files/usr/bin/scroll"
+
+#else
+
+#define SHELL_PATH "/usr/bin/zsh"
+#define SCROLL_PATH "/usr/local/bin/scroll"
+
+#endif
+
+static char *shell = SHELL_PATH;
 char *utmp = NULL;
-/* scroll program: to enable use a string like "scroll" */
-char *scroll = "/data/data/com.termux/files/usr/bin/scroll";
+char *scroll = SCROLL_PATH;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
