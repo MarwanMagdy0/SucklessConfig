@@ -1,0 +1,29 @@
+#!/bin/sh
+
+interface=$(ip route | awk '/default/ {print $5; exit}')
+
+if [ -z "$interface" ]; then
+    printf '󰤭 Offline'
+    exit
+fi
+
+ssid=$(iwgetid -r)
+
+if [ -z "$ssid" ]; then
+    printf '󰤭 Offline'
+    exit
+fi
+
+signal=$(awk 'NR==3 {print int($3)}' /proc/net/wireless 2>/dev/null)
+
+if [ -z "$signal" ]; then
+    printf '󰤨 %s' "$ssid"
+elif [ "$signal" -ge 70 ]; then
+    printf '󰤨 %s' "$ssid"
+elif [ "$signal" -ge 50 ]; then
+    printf '󰤥 %s' "$ssid"
+elif [ "$signal" -ge 30 ]; then
+    printf '󰤢 %s' "$ssid"
+else
+    printf '󰤟 %s' "$ssid"
+fi

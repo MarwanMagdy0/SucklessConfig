@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if ! command -v bluetoothctl >/dev/null 2>&1; then
+    exit
+fi
+
+connected=$(bluetoothctl devices Connected 2>/dev/null)
+
+if [ -z "$connected" ]; then
+    printf '󰂲'
+else
+    name=$(printf '%s\n' "$connected" | sed 's/^Device [^ ]* //')
+    printf '󰂱 %s' "$name"
+fi

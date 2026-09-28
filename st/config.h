@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:style=Bold:size=26";
+static char *font = "JetBrainsMono Nerd Font:style=Bold:size=14";
 static int borderpx = 2;
 unsigned int scrollback_lines = 5000;
 /*
