@@ -6,10 +6,7 @@
 dwm/dwm
 st/st
 dmenu/dmenu
-dmenu/dmenu_path
-dmenu/dmenu_run
-dmenu/stest
-
+scroll/scroll
 # Object files
 *.o
 
